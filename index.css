@@ -1608,7 +1608,7 @@ h2{ font-size: 20px; }
 
 .line1{
     width: 100%;
-    height: 250px;
+    min-height: 250px;
      background: linear-gradient(to right, #2563EB , #7C3AED);
     margin-top: 100px;
     padding-top: 20px;
@@ -1664,8 +1664,6 @@ h2{ font-size: 20px; }
     gap:20px;
     min-height:300px;
     width: 100%;
-    /* padding: 40px; */
-    /* margin-top: 60px; */
      background-image: linear-gradient(to left,rgb(93, 11, 141),blue);
 }
 .new{
@@ -1687,10 +1685,6 @@ h2{ font-size: 20px; }
 footer{
     height: 600px;
     width: 100%;
-    /* overflow: visible; */
-    /* position: relative; */
-    /* z-index: 9; */
-    /* background-color: #2563EB; */
 }
 
 
@@ -1713,31 +1707,12 @@ footer{
   50% { transform: translateY(-15px) rotate(2deg); }
 }
 
-/* Footer ku relative kudukanum maranthidathe da! */
-/* footer{
-  position: relative !important;
-  overflow: visible !important;
-} */
 
 /* Mobile la chinna size */
 @media(max-width: 600px){
   .roboting{ width: 115px; }
   .same-robote{ left: 10px; bottom: 80px; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .inter-img{
@@ -1858,11 +1833,11 @@ a:hover{
      .last{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 footer{
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .sri{
@@ -1885,7 +1860,7 @@ footer{
 }
 .foot{
     padding: 10px;
-    /* display: none; */
+    
 }
  }
  /*----------------------------------------------*/

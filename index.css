@@ -141,7 +141,7 @@ input:checked+.subnav{
 }
 .bar{
     position: relative;
-    top: 0px;
+    top: -200px;
     left: 160px;
     font-size: 20px;
 }

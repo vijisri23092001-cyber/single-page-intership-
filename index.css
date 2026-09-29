@@ -1,0 +1,1908 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+:root{ 
+    --font:50px;
+    --size:30px;
+    --width:180px;
+    --color:hsla(0, 3%, 59%, 0.945);   
+}
+.overall{
+    min-height: 100vh;
+    padding: 0px;
+    /* background-color: rebeccapurple; */
+}
+.topimage{
+    height: 80px;
+    width:80px;
+}
+.nav{
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap:30px;
+   padding: 20px;
+   box-shadow:0px 0px 3px black;
+   z-index: 2;
+   /* position: fixed; */
+   background-color: white;
+  
+}
+.top {
+    background: linear-gradient(to bottom, #2563EB , #7C3AED);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.subnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    position: relative;
+    left: 0px;
+}
+
+.but{
+    width:100px;
+    padding:5px;
+    border-radius: 20px;
+    border: none;
+    font-size: 19px;
+    color:white;
+    margin-right: 30px;
+    background-image: linear-gradient(to left,rgb(93, 11, 141),blue);
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color:black;
+}
+
+h1{
+    
+    font-family: 'Georgia', serif;
+    color: var(--back);
+}
+.b1:hover{
+    opacity: 0.3;
+}
+.b2:hover{
+    background-image: none;
+    color:blue;
+}
+input{
+   
+    display: none;
+}
+
+label{
+    display: none;
+}
+
+/*-----------------------media qurey----------------------------------*/
+@media only screen and (min-width:300px) and (max-width:600px) 
+{
+    .nav{
+   
+    width: 25%;
+    min-height: 100vh;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+        padding: 10px;
+        margin-left: 25px;
+        position: fixed;
+        z-index: 3;
+       background-color: transparent;
+       box-shadow: 0px 0px 0px ;
+
+        
+}
+ 
+   label{
+    display: inline;
+   }
+input:checked+.subnav{
+    background-color:white;
+    left:0px;
+    /* top:-100px; */
+}
+
+.topimage{
+    width: 50px;
+    height: 50px;
+}
+.subnav{
+   
+    width: 170%;
+    min-height: 300px;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+        /* background-color: red; */
+        position: relative;
+        top:-80px;
+        left: -400px;
+        transition-duration: 1s;
+}
+.bar{
+    position: relative;
+    top: -70px;
+    left: 160px;
+    font-size: 20px;
+}
+.b1{
+    opacity: 0;
+}
+.b2{
+    opacity: 0;
+}
+
+.robot{
+    display: none;
+}
+
+.top {
+        font-size: 23px;
+        width: 225px;
+    }
+
+}
+/*----------------------------------------------------*/
+@media only screen and (min-width:600px) and (max-width:900px)
+{
+    .nav{
+        width: 100%;
+        display: flex;
+
+   /* justify-content: space-between; */
+   align-items: center;
+   /* gap:30px; */
+   /* padding: 20px; */
+   box-shadow:0px 0px 3px black;
+   /* z-index: 3; */
+   position: relative;
+    }
+    .top{
+    font-size: 20px;
+    width: 200px;
+}
+.topimage{
+    width: 30px;
+    height: 30px;
+}
+a{
+        font-size: 10px;
+    }
+    .subnav{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+   margin-left: -47px;
+}
+.b1{
+    width: 80px;
+    padding: 5px;
+    /* margin-left: 20px; */
+   
+   
+}
+.b2{
+    width: 80px;
+     margin-left: -30px;
+    
+}
+.but{
+    width:70px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    color:white;
+    background-image: linear-gradient(to left,rgb(93, 11, 141),blue);
+}
+.ena{
+    display: flex;
+}
+
+.robot{
+    display: none;
+}
+
+}
+/*------------------------hero---------------------------*/
+
+.head{
+  
+    font-size: 44px;
+    background: linear-gradient(90deg, #2563EB ,60px, #7C3AED);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    overflow: visible;
+}
+
+
+.robot{
+  position: absolute !important;
+  right: -15px !important;
+  top: 88% !important;
+  width: 75px !important;
+  z-index: 99 !important;
+  animation: roboDrop 1.5s ease-out forwards, roboFloat 2.5s ease-in-out infinite 1.5s;
+}
+
+@keyframes roboDrop{
+  0% { transform: translateY(-120px) scaleX(-1); }
+  100% { transform: translateY(0px) scaleX(-1); }
+}
+
+@keyframes roboFloat{
+  0%, 100% { transform: translateY(0px) scaleX(-1); }
+  50% { transform: translateY(-10px) scaleX(-1); }
+}
+/*---------------------------rotob final-----------------------------*/
+.title-2{
+    font-size: 40px;
+}
+
+
+.cate{
+    color: blue;
+}
+
+.skill{
+    font-size: 22px;
+}
+
+.home{
+      width:100%;
+    height:635px;
+   position: relative;
+   top:100px;
+}
+section{
+    padding:50px;
+   
+}
+.section{
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center;  */
+     
+   
+}
+
+.image1{ height:400px;
+          width:450px;
+          display: block;
+}
+p{
+ font-size: 25px;
+ word-spacing: 3px;
+ margin-top: 10px;
+ line-height: 40px;
+}
+.com{
+    /* width:var(--width); */
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 15px;
+    text-align: left;
+    color: gray;
+    width: 140px;
+    
+}
+.icon{
+    margin-right: 10px;
+}
+
+.card1{
+    border: 1px solid blue;
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 10px;        
+}
+.search{
+    border: none;
+    padding: 10px 10px;
+    border-radius: 20px;
+    width:100px;
+    color:white;
+    font-size: 18px;
+   background-image: linear-gradient(to left,rgb(93, 11, 141),blue);
+}
+.ani{
+    display: flex;
+    animation-name: ani;
+    animation-duration: 2s; 
+    
+}
+
+
+.runing{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+}
+
+.run{
+    display: flex;
+    animation:scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+
+.sroll{
+    width:150px;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    border: 1px solid gray;
+    background-color: white;
+    color: gray;
+    font-size: 15px;
+     position: relative;
+    
+}
+.p1{
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    background-color:white;
+    left: -20px;
+    top: -10px;
+}
+
+
+.image2{
+    width:100%;
+    height: 200px;
+    background-color: black;
+    opacity:0.9;
+}
+.spain{
+     width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+}
+
+.line{ display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+     animation:roll 5s linear infinite;
+
+}
+
+
+@keyframes roll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+
+/*----------------------------sec div----------------------*/
+.sub{
+    margin-top: 30px;
+    position: relative;
+    color:white;
+}
+.one{
+    position: absolute;
+    top:50px;
+    left:100px;
+    font-size: var(--size);
+   
+}
+.num{
+    background: linear-gradient(90deg, #2563EB ,60px, #7C3AED);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.two{
+    position: absolute;
+    top:50px;
+    left:450px;
+    font-size: var(--size);
+   
+
+}
+.three{
+    position: absolute;
+    top:50px;
+    left:750px;
+    font-size: var(--size);
+   
+
+}
+.four{
+    position: absolute;
+    top:50px;
+    left:1090px;
+    font-size: var(--size);
+   
+
+}
+.i1{
+    margin: -10px;
+    color:white;
+}
+/*-------------------------------------------------------------*/
+@media only screen and (min-width:300px) and (max-width:600px){
+
+   .image2{
+    margin-top: 300px;
+    width: 354px;
+    height: 100px;
+    
+   } 
+   
+  .image1 {
+        left: -40px;
+        position: relative;
+        width: 250px;
+        height: 250px;
+    }
+
+
+   .ani{
+    display: flex;
+    animation-name: ani;
+    animation-duration: 2s; 
+    margin-top: 30px;
+    
+}
+.search{
+    width: 100%;
+    padding: 10px;
+}
+.com{
+    width: 100%;
+      margin: 10px;
+      padding: 10px;
+}
+.image1{
+    width: 300px;
+    height: 300px;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+}
+.card1{
+    border: 1px solid blue;
+}
+.out{
+    font-size: 20px;
+    line-height: 25px;
+    width: 300px;
+    margin-left: -40px
+}
+.head{
+    width: 320px;
+    font-size: 35px;
+    margin-left: -40px
+}
+.title-2 {
+    width: 300px;
+    font-size: 20px;
+}
+
+
+
+}
+/*--------------------------------------------------------*/
+@media only screen and (min-width:600px) and (max-width:900px)
+{
+    .home{
+        width: 100%;
+    }
+    .section{
+        width: 100%;
+    }
+    .head{
+        font-size: 30px;
+    }
+    .image1{ height: 300px;
+        width: 260px;
+
+    }
+    
+    .image2{
+        margin-top: 50px;
+    }
+
+    .out{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .card1{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    .com{
+        width: 90%;
+        padding: 10px;
+    }
+    .search{
+        width: 90%;
+        padding: 10px;
+    }
+    .sub{
+        margin-top: 20px;
+    }
+
+    .title-2 {
+    font-size: 33px;
+}
+
+.skill {
+        font-size: 19px;
+        line-height: 25px;
+        /* width: 304px; */
+    }
+}
+
+/*----------------------thed one-------------------------*/
+.Ex{
+      width:100%;
+    min-height:635px;
+    position: relative;
+    overflow: hidden;
+    /* background-color:yellow; */
+}
+.pop{
+    width:200px;
+    border:none;
+    border-radius: 20px;
+    color:blue;
+    padding:10px;
+    font-size: 20px;
+    background-color: rgba(171, 215, 231, 0.815);
+    margin-bottom: 20px;
+}
+.by{
+    color:blue;
+}
+
+/*--------------------------------------------------------------*/
+.hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    perspective: 1000px;
+}
+
+.box{
+    margin-top: 30px;
+    height: 300px;
+    width: 450px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    cursor: pointer;
+}
+
+.side{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    backface-visibility: hidden; /* pinnaadi irukurathu maraikkum */
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+    background: white;
+    overflow: hidden;
+}
+
+.front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image3{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.back{
+    padding: 10px;
+    transform: rotateY(180deg); /* back side thiruppi vechu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* MAIN FIX - Y capital */
+.box:hover{
+    transform: rotateY(180deg);
+}
+
+h3{ 
+    
+    text-align: center; 
+    font-size: 30px;
+}
+.box1{ 
+    text-align: center; 
+    font-size: 20px;
+}
+.back:hover h3{ color: blue; }
+
+
+
+
+
+.btn {
+    position: relative;
+    left:500px;
+      top:60px;
+    overflow: hidden;
+    padding: 15px 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: white;
+    /* cursor: pointer; */
+    font-size: 20px;
+}
+
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #2563EB , #7C3AED); 
+
+    transform: translateX(-100%);
+    transition: transform 2s ease;
+}
+
+.btn:hover .slide-bg {
+    transform: translateX(0);
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn:hover span {
+    color: white;
+}
+
+.head1{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 100px;
+}
+.grow{
+    font-size: 20px;
+    text-align: center;
+    background: linear-gradient(to right, #2563EB , #7C3AED);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.by2{
+    font-size: 20px;
+}
+
+
+
+/*----------------------------------------------------------*/
+@media only screen and (min-width:300px) and (max-width:600px){
+
+    .by1{
+        margin-left: 30px;
+        font-size: 20px;
+        width:339px;
+    }
+    .by2{
+        font-size: 20px;
+        line-height: 20px;
+        width:335px;
+        text-align: center;
+    }
+    .btn {
+    position: relative;
+    left:-43px;
+      top:52px;
+    overflow: hidden;
+    padding: 15px 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: white;
+    /* cursor: pointer; */
+    font-size: 20px;
+    width:300px;
+   
+}
+.box{
+    /* width:500px; */
+    height: 250px;
+
+}
+.hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    flex-wrap: wrap;
+}
+h3{
+    font-size: 30px;
+}
+.box1{
+    font-size: 20px;
+    line-height: 35px;
+}
+.skill{
+    font-size: 20px;
+    line-height: 25px;
+    width:304px;
+    margin-left: -30px
+}
+.head{
+    font-size: 20px;
+     width:320px;
+
+}
+
+}
+/*-----------------------------------------------------------*/
+@media only screen and (min-width:600px) and (max-width:900px)
+{
+   .skill{
+    font-size: 20px;
+    line-height: 25px;
+    /* width:304px; */
+} 
+.box{
+    
+    width:300px;
+    height: 250px;
+    
+
+}
+.hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+h3{
+    font-size: 30px;
+}
+.box1{
+    font-size: 20px;
+    line-height: 35px;
+}
+.by1 {
+        font-size: 39px;
+        width: 508px;
+    }
+    .by2{
+        font-size: 20px;
+        line-height: 20px;
+        width:335px;
+        text-align: center;
+    }
+    .btn {
+    position: relative;
+    left:190px;
+      top:70px;
+    overflow: hidden;
+    padding: 15px 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: white;
+    /* cursor: pointer; */
+    font-size: 20px;
+    width:300px;
+   
+}
+}
+/*-----------------------line----------------------------*/
+.spain{
+    /* margin-top: 200px; */
+    height:200px;
+    width:100%;
+    background-color:blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo{
+    height:80px;
+
+}
+.Learning{
+    width:100%;
+    min-height:635px;
+   background-color: rgba(227, 236, 236, 0.849);
+   margin-top: 90px;
+}
+.head3{
+    font-size: var(--font);
+}
+.txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lean{
+    width:120px;
+    padding: 10px;
+    border: none;
+    background-color:  rgba(227, 236, 236, 0.849);
+    font-size: 20px;
+    /* color: blue; */
+   
+
+}
+.lean:hover{
+    color:#2563EB;
+    font-size:18px;
+     border: 2px solid blue;
+    
+}
+.for{
+    font-size: 18px;
+    color: blue;
+    margin-left:-0px;
+}
+
+.moon{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.viji{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    perspective: 1500px;
+    background: transparent;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.reviwe{
+ height:350px;
+ width:350px;
+ background-color:white;
+ border-radius: 20px;
+ box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+ padding: 20px;
+ margin-bottom: 0;
+ 
+ /* VIDEO LOOP KU MAIN */
+ position: absolute;
+ transform-style: preserve-3d;
+ transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+ animation: videoLoop 12s infinite linear;
+}
+
+/* 5 cards ku 5 delay - Stack maari pinnaadi nikkum */
+.reviwe:nth-child(1){ animation-delay: 0s; }
+.reviwe:nth-child(2){ animation-delay: -2.4s; }
+.reviwe:nth-child(3){ animation-delay: -4.8s; }
+.reviwe:nth-child(4){ animation-delay: -7.2s; }
+.reviwe:nth-child(5){ animation-delay: -9.6s; }
+
+@keyframes videoLoop{
+  0%{
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
+    opacity: 1;
+    z-index: 5;
+    filter: brightness(1);
+  }
+  20%{
+    transform: translate3d(-150px, 0, -100px) scale(0.85) rotateY(20deg);
+    opacity: 0.8;
+    z-index: 4;
+    filter: brightness(0.7);
+  }
+  40%{
+    transform: translate3d(-250px, 0, -200px) scale(0.7) rotateY(30deg);
+    opacity: 0.4;
+    z-index: 1;
+    filter: brightness(0.4);
+  }
+  60%{
+    transform: translate3d(250px, 0, -200px) scale(0.7) rotateY(-30deg);
+    opacity: 0.4;
+    z-index: 1;
+    filter: brightness(0.4);
+  }
+  80%{
+    transform: translate3d(150px, 0, -100px) scale(0.85) rotateY(-20deg);
+    opacity: 0.8;
+    z-index: 4;
+    filter: brightness(0.7);
+  }
+  100%{
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
+    opacity: 1;
+    z-index: 5;
+    filter: brightness(1);
+  }
+}
+
+/* Hover panna pause + mela varum */
+.viji:hover .reviwe{
+  animation-play-state: paused;
+  
+}
+.reviwe:hover {
+    transform: translate3d(0, -30px, 150px) scale(1.1);
+    /* z-index: 10 !important; */
+    box-shadow: 0px 30px 60px rgba(81, 81, 185, 0.5);
+    filter: brightness(1.2);
+    opacity: 1;
+    
+}
+
+/* UN PAZHAYA CODE SAME */
+.r1{
+    height:40px;
+    width:40px;
+     background-image: linear-gradient(to left,rgb(164, 113, 194),rgb(81, 81, 185));
+     border-radius: 10px;
+}
+.paint{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+}
+.app{ color:yellow; font-size: 10px; }
+.Apply{
+    font-size: 10px;
+    color: green;
+    background-color: rgba(140, 219, 140, 0.795);
+    border-radius: 4px;
+    margin-right: 30px;
+    width:80px;
+    padding: 3px;
+    border: none;
+}
+.view{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mark{
+    position: relative;
+    left:95px;
+    top:-15px;
+    font-size: 13px;
+}
+.fire{ color: orange; font-size:10px; }
+.fire1{
+    font-size: 10px;
+    background-color: rgba(223, 182, 182, 0.911);
+    color: rgba(182, 67, 67, 0.836);
+     border: none;
+    padding: 2px;
+    border-radius: 6px;
+     width:70px;
+}
+.fire2{
+    font-size: 10px;
+   width:45px;
+    padding: 2px;
+   border: none;
+    border-radius: 6px;
+    background-color: rgba(157, 206, 206, 0.925);
+    color: blue;
+    text-align: center;
+}
+.map{
+    color:var(--color);
+    font-size: 17px;
+    line-height: 40px;
+    margin-top: 0px;
+}
+.flip{ font-size: 20px; color: gray; }
+.desin{ padding-top: 10px; font-size: 25px; }
+.icon{ font-size: 15px; }
+.st{
+    margin-top: 10px;
+    height:1px;
+    width: 100%;
+    background-color: var(--color); 
+}
+.month{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.now{
+    border: none;
+    width: 90px;
+    border-radius: 10px;
+    padding: 10px;
+    color:white;
+    font-size: 13px;
+    margin-top: 5px;
+    background-image: linear-gradient(to left,rgb(93, 11, 141),blue);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.now:hover{ transform: scale(1.05);  color: #0f0f0f;}
+.idea{ padding: 12px; }
+.mark1{
+    position: relative;
+    left:0px;
+    top:-20px;
+    font-size: 13px;
+}
+.r2{ margin-bottom: 5px; }
+.human{ padding:13px; }
+h2{ font-size: 20px; }
+
+.full{
+    font-size: 23px;
+}
+
+/*------------------------------------------------------*/
+@media only screen and (min-width:300px) and (max-width:600px){
+    .Learning{
+    width:100%;
+    
+}
+.head3 {
+        font-size: 35px;
+    }
+.moon{
+    font-size: 20px;
+    width: 265px;
+    line-height: 25px;
+}
+.txt{
+    display: flex;
+   flex-direction: column;
+}
+.reviwe{
+   
+ height:350px;
+ width:300px;
+ padding: none;
+ /* margin-left: -30px; */
+ 
+}
+.desin{
+    font-size: 20px;
+}
+}
+/*--------------------------------------------------------------------*/
+@media only screen and (min-width:600px) and (max-width:900px)
+{
+     .Learning{
+    width:100%;
+    
+}
+
+.lean{
+    margin-top: 60px;
+}
+.head3{
+    font-size:46px;
+   
+}
+.moon {
+        font-size: 17px;
+        width: 508px;
+        line-height: 25px;
+    }
+.txt{
+    display: flex;
+   /* flex-direction: column; */
+}
+
+.reviwe{
+    /* margin-left: 20px; */
+ height:345px;
+ width:320px;
+ padding: none;
+ margin-left:-20px;
+ 
+ 
+}
+.desin{
+    font-size: 20px;
+}
+.viji{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap:60px; */
+    padding-top: 50px;
+  
+
+}
+}
+/*-----------------------------mt space---------------------------------*/
+.space{
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+   
+}
+.my{
+    text-align: center;
+}
+.how{
+    font-size: 40px;
+}
+
+.boy{
+    font-size: 20px;
+}
+
+/*----------------------------------------------------*/
+
+
+ .work{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+    perspective: 1200px;
+    /* background: #f8f7ff; */
+}
+
+.wrk{
+    height: 300px;
+    width: 330px;
+    border: 1px solid rgba(138, 43, 226, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    
+    /* 3D ku mukkiyam */
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+}
+
+.wrk:hover{
+    transform: rotateX(8deg) rotateY(-12deg) translateY(-10px) scale(1.02);
+    box-shadow: 
+        -20px 25px 50px rgba(0,0,0,0.12),
+        0 0 0 1px rgba(138, 43, 226, 0.1);
+    border-color: rgba(138, 43, 226, 0.3);
+}
+
+.wrk:hover .and {
+    color: #5151b9;
+    transform: translateZ(30px);
+}
+
+.wrk:hover .creat{
+    color: blueviolet;
+    opacity: 0.12;
+    transform: translateZ(10px);
+}
+
+.creat{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 60px;
+    opacity: 0.07;
+    font-weight: 800;
+    transition: all 0.6s ease;
+}
+
+.in{
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 35px;
+    height: 60px;
+    width: 60px;
+    background-image: linear-gradient(to left, rgb(164, 113, 194), rgb(81, 81, 185));
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 10px 20px rgba(81, 81, 185, 0.25);
+    
+    /* Icon thooki varum */
+    transform: translateZ(40px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.wrk:hover .in{
+    transform: translateZ(80px) scale(1.15) rotate(5deg);
+    box-shadow: 0 20px 40px rgba(81, 81, 185, 0.4);
+}
+
+.pro{
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    width: 100%;
+    color: rgba(102, 100, 100, 0.9);
+    transform: translateZ(20px);
+    transition: all 0.6s ease;
+}
+
+.wrk:hover .pro{
+    transform: translateZ(40px);
+    color: #333;
+}
+
+.and{
+     text-align: center;
+}
+.bule{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top:350px;
+    left:445px;
+   
+}
+.right{
+    font-size: 25px;
+    display: block;
+    padding: 5px;
+    color: white;
+}
+.left{
+ top:350px;
+ left:865px;
+}
+.jpg{
+    height: 50px;
+    width: 50px;
+    display: block;    
+}
+.con{
+    width:100%;
+    min-height:100px;
+   background-color: rgba(227, 236, 236, 0.849);
+   margin-top: 90px;
+   padding: 20px;
+} 
+
+
+
+
+/*---------------------------------------------------------------*/
+.real{
+    text-align: center;
+    font-size: 40px;
+}
+
+.red{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.realall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px; /* Glass ku gap 0 than venum */
+  flex-wrap: wrap;
+  min-height: 500px;
+  /* background:; */
+  padding: 50px 20px;
+}
+
+.realbox {
+  width: 320px;
+  height: 300px;
+  background: linear-gradient(rgba(187, 177, 177, 0.877), transparent);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 25px rgba(0,0,0,0.25);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 0 -25px;
+  transform: rotate(calc(var(--r) * 1deg));
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+/* Ovvoru card um konjam saaya */
+.realbox:nth-child(1){ --r: -12; }
+.realbox:nth-child(2){ --r: 3; }
+.realbox:nth-child(3){ --r: 12; }
+
+/* Hover panna viriyum - Uiverse effect */
+.realall:hover .realbox {
+  transform: rotate(0deg);
+  margin: 0 15px;
+}
+.realbox:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+  background: linear-gradient(to left, rgb(133, 98, 153), rgb(108, 108, 182));
+}
+
+.realimg { 
+
+    display: none;
+ } 
+.star {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  line-height: 26px;
+}
+.star::before {
+  content: '';
+  display: block;
+  margin-bottom: 10px;
+}
+.frame {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.id {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+.name {
+  font-size: 18px;
+  color: white;
+  margin: 0;
+}
+.star1 {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 16px;
+}
+
+.stars{
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------*/
+@media only screen and (min-width:300px) and (max-width:600px){
+    .wrk{
+    height: 300px;
+    width: 300px;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+.pro{
+    width:280px;
+}
+.boy{
+    width: 242px;
+    font-size: 20px;
+    /* line-height: 20px; */
+}
+.how{
+    font-size: 30px;
+}
+
+.work{
+    position: relative;
+}
+}
+/*--------------------------------------------------------------*/
+@media only screen and (min-width:600px) and (max-width:900px)
+{
+    .space{
+        width:100%;
+    }
+      .wrk{
+    height: 300px;
+    width: 300px;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    padding: 20px;
+}
+.pro{
+    width:280px;
+}
+.boy{
+   text-align: center;
+    font-size: 20px;
+    /* line-height: 20px; */
+}
+.how{
+    font-size: 30px;
+}
+.bule{
+    position: absolute;
+    top:300px;
+    left:380px;
+    /* transform: rotate(90deg); */
+}
+.left{
+    position: absolute;
+    top:480px;
+    left:380px;
+    transform: rotate(90deg);
+}
+
+.and {
+    font-size: 26px;
+    text-align: center;
+}
+
+}
+/*---------------------------------------------------------*/
+@media only screen and (min-width:300px) and (max-width:600px){
+.realbox{
+    height: 334px;
+    width:300px;
+    box-shadow: 0px 0px 5px black;
+    background-color:white;
+    padding:20px;
+    margin-top: 40px;
+    
+}
+.realimg{display: block;
+    margin-left: 50px;
+   height:30px;
+
+}
+.star{ width:281px;
+
+}
+.red{
+    width:297px;
+    line-height: 20px;
+    font-size: 20px;
+    margin-left: -10px;
+}
+.real{
+    width:300px;
+    font-size: 21px;
+    margin-left: -10px;
+}
+.con{
+    width:100%;
+    min-height:100px;
+   background-color: rgba(227, 236, 236, 0.849);
+   margin-top: 90px;
+   /* padding: 20px; */
+}
+.frame{
+    height: 80px;
+    width: 80px;
+}
+}
+/*---------------------------------------------------------*/
+@media only screen and (min-width:600px) and (max-width:900px)
+{
+    .realbox{
+    height: 335px;
+    width:340px;
+    box-shadow: 0px 0px 5px black;
+    background-color:white;
+    padding:20px;
+    margin-top: 40px;
+    
+}
+.realimg{display: block;
+    margin-left: 50px;
+   height:30px;
+
+}
+.star{ width:281px;
+
+}
+.red{ text-align: center;
+    /* width:297px; */
+    line-height: 20px;
+    font-size: 20px;
+}
+.real{
+    text-align: center;
+    /* width:300px; */
+    font-size: 41px;
+}
+.con{
+    width:100%;
+    min-height:100px;
+   background-color: rgba(227, 236, 236, 0.849);
+   margin-top: 90px;
+   /* padding: 20px; */
+}
+
+.frame{
+    height: 80px;
+    width: 80px;
+}
+
+}
+/*----------------------------------------------------------*/
+
+.line1{
+    width: 100%;
+    height: 250px;
+     background: linear-gradient(to right, #2563EB , #7C3AED);
+    margin-top: 100px;
+    padding-top: 20px;
+}
+
+
+.new{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.new1{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.media{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.new2{
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    color: blue;
+    margin-right: 30px;
+}
+.new2:hover{
+    background-color: #3c63b6;
+    color:white;
+}
+.new3{
+    background-color: transparent;
+    border: 1px solid white;
+    color:white;
+}
+.new3:hover{
+    background-color: white;
+    color: #2563EB;
+}
+
+/*-----------------------------------------------------------------*/
+ @media only screen and (min-width:300px) and (max-width:600px) {
+    .line1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+    height:300px;
+    width: 100%;
+    /* padding: 40px; */
+    /* margin-top: 60px; */
+     background-image: linear-gradient(to left,rgb(93, 11, 141),blue);
+}
+.new{
+    font-size: 30px;
+    width:383px;
+}
+.new1 {
+        width: 302px;
+        line-height: 20px;
+        font-size: 20px;
+    }
+.new2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+ }
+/*---------------------------contect-----------------------------*/
+footer{
+    height: 600px;
+    width: 100%;
+    /* overflow: visible; */
+    /* position: relative; */
+    /* z-index: 9; */
+    /* background-color: #2563EB; */
+}
+
+
+.same-robote{
+  position: absolute;
+  left: 40px;
+  bottom: 60px;
+  z-index: 10;
+}
+
+.roboting{
+  width: 160px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(91, 141, 239, 0.4));
+  animation: floatBoy 3s ease-in-out infinite;
+}
+
+@keyframes floatBoy{
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+/* Footer ku relative kudukanum maranthidathe da! */
+/* footer{
+  position: relative !important;
+  overflow: visible !important;
+} */
+
+/* Mobile la chinna size */
+@media(max-width: 600px){
+  .roboting{ width: 115px; }
+  .same-robote{ left: 10px; bottom: 80px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.inter-img{
+    height: 50px;
+    width: 40px;
+}
+
+.top1{
+    font-size: 15px;
+}
+
+.foot{
+    height: 400px;
+    width: 330px;
+    border-bottom: 1px solid gray;
+
+}
+.last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* gap:20px; */
+    margin-top: 40px;
+    padding: 20px 20px;
+}
+.last1{
+    font-size: 15px;
+    line-height: 25px;
+     margin-top: 30px;
+}
+.face{
+    margin-top: 30px;
+    height: 40px;
+    width: 40px;
+}
+
+.end{
+    margin-left: 100px;
+}
+.end1{
+     margin-left: 90px;
+}
+.font{
+   font-weight: bolder;
+   font-size: 20px;
+}
+.inbox{
+    width: 330px;
+    font-size: 15px;
+    line-height: 25px;
+}
+.day{
+    width:250px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 2px blueviolet;
+    border:1px solid blueviolet;
+    font-size: 20px;
+    background-color: white;
+}
+.final{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 30px;
+}
+.mess{
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin: 10px;
+}
+
+.day{
+    display: block;
+    font-size: 15px;
+}
+
+.sri{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cir{
+   display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.rese{
+    font-size: 15px;
+}
+
+.apple{
+    display: flex;
+    gap:40px;
+}
+
+.apple a{
+    font-size: 15px;
+
+}
+
+a:hover{
+    color:blue;
+}
+.port{
+    font-size: 15px;
+}
+
+
+/*-----------------------------media qurey----------------------------------*/
+ @media only screen and (min-width:300px) and (max-width:600px) {
+     .last{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+footer{
+    margin-top: 200px;
+}
+
+.sri{
+    
+    display: flex;
+   flex-direction: column;
+}
+.apple{
+     display: flex;
+   flex-direction: column;
+}
+.rese{
+    font-size: 15px;
+    margin-left: 20px;
+    width: 340px;
+}
+.circle{
+    height: 20px;
+    width: 20px;
+}
+.foot{
+    padding: 10px;
+    /* display: none; */
+}
+ }
+ /*----------------------------------------------*/
+ @media only screen and (min-width:600px) and (max-width:900px) {
+
+    .last{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
+    .foot{
+         border-bottom: none;
+    }
+
+.end1{
+     margin-left:0px;
+}
+    
+ }
+    
+
+ /*--------------------------------------------------*/

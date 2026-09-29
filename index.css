@@ -108,11 +108,11 @@ label{
     }
      */
     .subnav{
-        width: 100%;
+
         position: fixed;
         background-color:white;
         left: -125%;
-        top: 70px;
+        top: 100px;
         width: 100%;
         height: 88vh;
         display: flex;
@@ -141,10 +141,10 @@ label{
    }
 
 
-   /* .subnav a{
+   .subnav a{
     text-align: center;
-    margin-left: -20px;
-   } */
+   color: #0f0f0f;
+   }
    
 .b1{
     opacity: 0;

@@ -119,6 +119,7 @@ label{
         flex-direction: column;
         align-items: center;
         gap:30px;
+        transition:linear 0.5s;
        
        
         

@@ -111,7 +111,7 @@ label{
 
         position: fixed;
         background-color:white;
-        left: -125%;
+        /* left: -125%; */
         top: 110px;
         width: 100%;
         height: 88vh;
@@ -119,7 +119,8 @@ label{
         flex-direction: column;
         align-items: center;
         gap:30px;
-        transition:1s linear;
+       left: -380px;
+        transition: 1s linear;
        
        
         
